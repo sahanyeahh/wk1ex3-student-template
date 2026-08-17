@@ -27,12 +27,30 @@
       The autograder checks all four behaviours.
 
       You can choose to use a function do perform the above tasks.
+
       -->
+    <script>
+    function addNumbers() {
+      const num1 = document.getElementById('num1').value;
+      const num2 = document.getElementById('num2').value;
+
+      const number1 = parseFloat(num1);
+      const number2 = parseFloat(num2);
+
+      if (isNaN(number1) || isNaN(number2)) {
+        console.log("Please enter numbers only");
+      } else {
+        console.log(number1 + number2);
+      }
+    }
+    </script>
+  
     <h1>Demo: Get Started Debugging JavaScript with Chrome DevTools</h1>
     <label for="num1">Number 1</label>
     <input placeholder="Number 1" id="num1">
     <label for="num2">Number 2</label>
     <input placeholder="Number 2" id="num2">
-    <button onclick="console.log(document.getElementById('num1').value+document.getElementById('num2').value)">Add Number 1 and Number 2</button>
+    <button onclick="addNumbers()">Add Number 1 and Number 2</button>
+    
   </body>
 </html>
